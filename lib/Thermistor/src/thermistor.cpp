@@ -14,21 +14,21 @@ Thermistor::Thermistor(double Rref, double R0, double Beta,
 
 double Thermistor::getTemperature(double adc, char unit)
 {
-    // Nombre maximal possible pour l'ADC : 2^n - 1
+    // Maximum possible value for the ADC: 2^n - 1
     double Adc = pow(2, samplingBitsNumber) - 1;
 
-    // Appliquer directement la formule générale de la température en Kelvin
+    // Directly apply the general formula for temperature in Kelvin
     double tempK = 1.0 / ((1.0 / T0) +
                           (1.0 / Beta) * log((R0 * (Adc / adc - 1)) / Rref));
-    // Convertir en Celsius
+    // Convert to Celsius
     if (unit == 'C')
     {
         return tempK - ZERO_CELSIUS;
     }
     else if (unit == 'F')
     {
-        return (tempK - ZERO_CELSIUS) * 9 / 5 + 32; // Convertir en Fahrenheit
+        return (tempK - ZERO_CELSIUS) * 9 / 5 + 32; // Convert to Fahrenheit
     }
 
-    return tempK; // Retourner la température en Kelvin par défaut
+    return tempK; // Return temperature in Kelvin by default
 }
