@@ -1,0 +1,22 @@
+{
+    "name": "Thermistor",
+    "version": "1.0.0",
+    "description": "Library for managing thermistors to measure temperature.",
+    "keywords": [
+        "thermistor",
+        "temperature",
+        "sensor"
+    ],
+    "authors": [
+        {
+            "name": "Maehaara",
+            "email": "maehaarakcy@gmail.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Maehaara03/library.git"
+    },
+    "frameworks": "arduino",
+    "platforms": "*"
+}
