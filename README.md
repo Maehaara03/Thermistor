@@ -60,26 +60,38 @@ double tempC = thermistor.getTemperature(adcValue, 'C');
 #include <Thermistor.h>
 
 // Thermistor configuration
-const double Rref = 20000;      // Reference resistance in ohms
+const double Rref = 20000;      // Reference resistance in ohms (used in voltage divider)
 const double R0 = 18000;        // Resistance at 25°C in ohms
-const double Beta = 3950;       // Beta coefficient
-const unsigned samplingBits = 10; // ADC resolution in bits
-const int thermistorPin = A1;   // Analog pin for the thermistor
+const double Beta = 3950;       // Beta coefficient of the thermistor
+const unsigned samplingBits = 10; // ADC resolution (10 bits means a range of 0-1023)
+const int thermistorPin = A1;   // Analog pin where thermistor is connected
 
+// Create a Thermistor object with the specified parameters
 Thermistor thermistor(Rref, R0, Beta, samplingBits);
 
 void setup() {
+  // Start serial communication
   Serial.begin(9600);
+  
+  // Set the thermistor pin as input
   pinMode(thermistorPin, INPUT);
 }
 
 void loop() {
+  // Read the ADC value from the thermistor pin
   int adcValue = analogRead(thermistorPin);
+  
+  // Convert the ADC value to temperature in Celsius
   double tempC = thermistor.getTemperature(adcValue, 'C');
+  
+  // Print the results to the Serial Monitor
+  Serial.print("ADC Value: ");
+  Serial.println(adcValue);
   Serial.print("Temperature: ");
   Serial.print(tempC);
   Serial.println(" °C");
+  
+  // Wait for 5 seconds before taking another reading
   delay(5000);
 }
-
 
