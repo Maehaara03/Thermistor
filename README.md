@@ -56,6 +56,8 @@ double tempC = thermistor.getTemperature(adcValue, 'C');
 
 ## Example de code :
 
+```
+
 #include <Arduino.h>
 #include <Thermistor.h>
 
