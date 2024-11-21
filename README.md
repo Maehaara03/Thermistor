@@ -31,7 +31,7 @@ This library uses the Steinhart-Hart equation and supports various thermistor co
 
 Below is the recommended wiring setup for the thermistor sensor:
 
-![Diagram of Thermistor Circuit]https://github.com/Maehaara03/Thermistor/blob/main/image%20readme.png
+[![Diagram of Thermistor Circuit](https://github.com/Maehaara03/Thermistor/blob/main/image%20readme.png?raw=true)
 
 ## How to Use :
 
