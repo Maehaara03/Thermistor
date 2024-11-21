@@ -43,7 +43,7 @@ Below is the recommended wiring setup for the thermistor sensor:
        GND
 
 
-How to Use :
+## How to Use :
 
 Initialize the Thermistor object with your specific parameters:
 
@@ -54,7 +54,7 @@ Call getTemperature() with the ADC value and desired unit:
 
 double tempC = thermistor.getTemperature(adcValue, 'C');
 
-Example de code :
+## Example de code :
 
 #include <Arduino.h>
 #include <Thermistor.h>
