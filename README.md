@@ -28,11 +28,11 @@ This library uses the Steinhart-Hart equation and supports various thermistor co
 3. Include the library in your code:
    ```cpp
    #include <thermistor.h>
-
+```
 Below is the recommended wiring setup for the thermistor sensor:
 
-[![Diagram of Thermistor Circuit](https://github.com/Maehaara03/Thermistor/blob/main/image%20readme.png?raw=true)
-
+![Diagram of Thermistor Circuit](https://github.com/Maehaara03/Thermistor/blob/main/image%20readme.png?raw=true)
+```
 ## How to Use :
 
 Initialize the Thermistor object with your specific parameters:
