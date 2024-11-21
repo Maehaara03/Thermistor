@@ -31,17 +31,7 @@ This library uses the Steinhart-Hart equation and supports various thermistor co
 
 Below is the recommended wiring setup for the thermistor sensor:
 
-
-       +5V
-        |
-        Rref
-        |
-        +-------> Analog Pin (e.g., A1)
-        |
-      Thermistor
-        |
-       GND
-
+![Diagram of Thermistor Circuit]https://github.com/Maehaara03/Thermistor/blob/main/image%20readme.png
 
 ## How to Use :
 
